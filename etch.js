@@ -9,16 +9,17 @@ let row;
 let cell;
 
 function buildGrid(num) {
-	let size = 1000 / num;
+	let sizeH = (1001 - num) / num;
+	let sizeW = (1001 - (2 * num)) / num;
 	for (let i = 0; i < num; i++) {
 		row = document.createElement('div');
 		row.classList.add('row');
-		row.style.height = `${size}px`;
+		row.style.height = `${sizeH}px`;
 		container.appendChild(row);
 		for (let j = 0; j < num; j++) {
 			cell = document.createElement('div');
 			cell.classList.add('cell');
-			cell.style.width = `${size}px`;
+			cell.style.width = `${sizeW}px`;
 			row.appendChild(cell);
 		}
 	}
