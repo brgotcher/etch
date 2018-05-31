@@ -1,0 +1,22 @@
+html, body, #container {
+	height: 100%;
+	width: 100%;
+}
+
+#container {
+	background-color: gray;
+}
+
+.row {
+	height: 6%;
+	width: 100%;
+	margin: 1px;
+}
+
+.cell {
+	height: 100%;
+	width: 6%;
+	background-color: black;
+	display: inline-block;
+	margin: 1px;
+}
