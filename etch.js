@@ -1,5 +1,3 @@
-
-const test = 1;
 const container = document.querySelector('#container');
 
 for (let i = 0; i < 16; i++) {
@@ -13,3 +11,18 @@ for (let i = 0; i < 16; i++) {
 	}
 }
 
+
+let cellList = document.querySelectorAll('.cell')
+
+cellList.forEach((block) => {
+	console.log("test");
+	block.addEventListener('mouseover', (e) => {
+		block.classList.add('activated');
+		console.log("test");
+	})
+	block.addEventListener('mouseout', (e) => {
+		setTimeout(function() {
+			block.classList.remove('activated');
+		}, 2500);
+	})
+})
