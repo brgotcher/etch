@@ -62,7 +62,8 @@ btn.addEventListener('click', (e) => {
 	//empties container div, removing old grid completely
 	container.innerHTML = "";
 	//need to phrase this better
-	number = prompt("What size grid would you like?");
+	number = prompt("What size grid would you like? " + 
+		"Choose a number between 10 and 100 for best results.");
 	//builds new grid using number provided by user
 	buildGrid(number);
 })
