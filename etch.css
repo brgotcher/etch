@@ -1,10 +1,12 @@
 html, body, #container {
-	height: 1200px;
-	width: 1200px;
+	height: 1000px;
+	width: 1000px;
+	text-align: center;
 }
 
-#container {
-	background-color: gray;
+button {
+	margin: 5px auto 10px auto;
+	font-size: 35px;
 }
 
 .row {
@@ -21,6 +23,3 @@ html, body, #container {
 	margin: 1px;
 }
 
-.activated {
-	background-color: blue;
-}

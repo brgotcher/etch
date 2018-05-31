@@ -9,17 +9,24 @@ let number = 16;
 //creating variables for use in functions
 let row;
 let cell;
+/*pick a random number between 0 and 255, to be used for
+RGB values on moused over cells*/
+function randomColor() {
+	let rgbNum = Math.floor(Math.random() * 256);
+	return rgbNum;
+}
+
 
 //builds the grid
 function buildGrid(num) {
 	/*sizeH variable accounts for the grid growing and shrinking
 	when the number of cells changes due to the margins- 1px
 	between each cell*/
-	let sizeH = (1001 - num) / num;
+	let sizeH = (1000 - num) / num;
 	/*same as sizeH but had to account for side-by-side margins
 	adding up instead of overlapping as they do with top/bottom
 	elements, so there are 2px between each*/
-	let sizeW = (1001 - (2 * num)) / num;
+	let sizeW = (1000 - (2 * num)) / num;
 	//iterate to create row divs
 	for (let i = 0; i < num; i++) {
 		row = document.createElement('div');
@@ -41,8 +48,8 @@ function buildGrid(num) {
 	//event listener in each cell for mouseover
 	cellList.forEach((block) => {
 		block.addEventListener('mouseover', (e) => {
-			//when moused over, adds activated class to cell
-			block.classList.add('activated');
+			//when moused over, cell turns random color
+			block.style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
 		})
 	})
 }
